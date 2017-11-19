@@ -1,0 +1,28 @@
+.form-group {
+    padding-top : 10px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.form-group input {
+    border-radius: 0px;
+    height: 50px;
+    border-color: #66afe9;
+}
+
+.get-link {
+    width: 200px;
+    margin-left:10px;
+    border-radius: 0px !important;
+    background: none;
+    border-color: #66afe9;
+}
+
+.get-link:focus {
+    border-color:chocolate;
+}
+
+.get-link:hover {
+    border-color:chocolate;
+}

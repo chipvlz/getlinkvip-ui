@@ -1,5 +1,5 @@
 
 <div class="form-group">
-    <input type="text" class="form-control" id="usr" placeholder="Paste link fshare">
-    <button type="button" class="btn get-link">Get link</button>
+    <input type="text" class="form-control" id="usr" placeholder="Paste link fshare" [(ngModel)]="link">
+    <button type="button" class="btn get-link" (click) = "getLink()">Get link</button>
 </div>

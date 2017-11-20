@@ -9,15 +9,19 @@ import { HttpClient } from '@angular/common/http';
 
 export class ContentComponent {
     link = '';
-    results: string[];
+    status = true;
+    linkDownload = '';
     constructor(private http: HttpClient) {}
 
     getLink(){
-        console.log(this.link);
-        this.http.get('https://getlinkdownload.herokuapp.com/fshare/getlinkvip?linkFshare='+this.link).subscribe(data => {
+        this.http.get('http://localhost:8080/fshare/getlinkvip?linkFshare='+this.link).subscribe(data => {
             // Read the result field from the JSON response.
-            this.results = data['results'];
-            console.log(this.results);
+            if(data['statusCode'] == 1) {
+                this.status = false;
+                this.linkDownload = data['linkVip'];
+            } else {
+                this.status = true;
+            }
         });
     }
 }

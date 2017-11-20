@@ -26,3 +26,8 @@
 .get-link:hover {
     border-color:chocolate;
 }
+
+.download-btn {
+    text-align: center;
+    padding-top:10px;
+}

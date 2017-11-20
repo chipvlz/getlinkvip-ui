@@ -3,3 +3,6 @@
     <input type="text" class="form-control" id="usr" placeholder="Paste link fshare" [(ngModel)]="link">
     <button type="button" class="btn get-link" (click) = "getLink()">Get link</button>
 </div>
+<div class="download-btn">
+    <a [hidden]="status" [href]="linkDownload">Download</a>
+</div>

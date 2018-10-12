@@ -14,7 +14,8 @@ export class ContentComponent {
     constructor(private http: HttpClient) {}
 
     getLink(){
-        this.http.get('http://localhost:8080/fshare/getlinkvip?linkFshare='+this.link).subscribe(data => {
+        // this.http.get('http://localhost:8080/fshare/getlinkvip?linkFshare='+this.link).subscribe(data => {
+        this.http.get('https://getlinkdownload.herokuapp.com/fshare/getlinkvip?linkFshare='+this.link).subscribe(data => {
             // Read the result field from the JSON response.
             if(data['statusCode'] == 1) {
                 this.status = false;
